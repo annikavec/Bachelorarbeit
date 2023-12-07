@@ -1,7 +1,8 @@
 body {
     background-color: #2D2D2D;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
     margin: 0;
     padding: 0 6vw 0 6vw;
 }
@@ -9,20 +10,138 @@ body {
 h1 {
     text-align: center;
     font-size: 36px;
-    padding: 20px;
+    padding: 10px 20px 2px 20px;
+    color: white;
 }
 
 .intro {
+    position: relative;
     text-align: center;
     font-size: 18px;
-    padding: 20px;
+    padding: 2px 20px;
 }
 
-#map {
-    margin: 20px auto;
-    border: 1px solid white;
-    box-shadow: 20px 15px 10px rgba(255, 255, 255, 0.3);
+
+/* SPEECH BUBBLE */
+.speech-bubble {
+    position: absolute;
+    top: 25px; /* position of the speech bubble */
+    left: -10px; /* Adjust the position of the speech bubble */
+    background-color: #ffffff; /* BC of the speech bubble */
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace; /* Apply a fun font for the speech bubble */
+    color: black;
+    width: max-content;
 }
+
+.speech-bubble:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+
+
+/* MAP */
+#map {
+    margin: 10px auto;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+#map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Allow interactions with the map */
+    background: linear-gradient(180deg, rgba(45,45,45,0.9) 0%, rgba(45,45,45,0) 100%);
+}
+
+/* MENU*/
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    user-select: none;
+}
+
+.burger-icon span {
+    background: white;
+    border-radius: 5px;
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-icon span:nth-child(2) {
+    width: 20px;
+}
+
+.burger-icon span:nth-child(3) {
+    width: 16px;
+}
+
+
+.burger-menu:hover .menu,
+.menu:hover {
+    display: block;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 5px 0; /* Adjust padding for a more subtle background */
+    border-radius: 5px;
+    background: transparent; /* Remove the background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+    background: #2D2D2D; /* BC for menu items */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 
 /* Icon anpassen unter: https://leafletjs.com/examples/custom-icons/ */
 
@@ -35,10 +154,61 @@ footer {
     padding-top: 5vw;
 }
 
+/* damit Text weiss bleibt */
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
 div a {
     padding: 0 5px 0 5px;
 }
 
 
 
+/* ABOUT SEITE */
+
+.project-info {
+    max-width: 800px; /* Maximalbreite */
+    margin: 0 auto; /* Automatische zentrierte Ausrichtung */
+    padding: 0 20px; /* Seitlicher Innenabstand für eine bessere Lesbarkeit */
+    text-align: center;
+}
+
+.engadin-image {
+    max-width: 800px; /* Maximale Breite des Bildes */
+    margin: 20px auto 0; 
+    text-align: center;
+}
+
+.engadin-image img {
+    width: 100%; /* Das Bild füllt die maximale Breite der Containergröße aus */
+    height: auto; /* Das Seitenverhältnis des Bildes wird beibehalten */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* IMPRESSUM */
+
+main {
+    max-width: 800px; /* Breite des Inhalts */
+    margin: 0 auto; /* Automatische zentrierte Ausrichtung */
+    padding: 0 20px; /* Seitlicher Innenabstand */
+    text-align: center; /* Text zentrieren */
+}
+
+section {
+    margin-bottom: 30px; /* Abstand zwischen den einzelnen Abschnitten */
+}
+
+section h2 {
+    margin-bottom: 10px; /* Abstand unter den Überschriften */
+}
+
+section p {
+    margin-bottom: 15px; /* Abstand unter den Absätzen */
+}
+
+/* DATENSCHUTZ */
 

@@ -1,0 +1,112 @@
+body {
+    background-color: #2D2D2D;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0 6vw 0 6vw;
+}
+
+
+main {
+    padding-top: 50px; /* Adjust as needed */
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px; /* Larger title */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px; /* Smaller titles */
+    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vw;
+}
+
+/* MENU*/
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    user-select: none;
+}
+
+.burger-icon span {
+    background: white;
+    border-radius: 5px;
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-icon span:nth-child(2) {
+    width: 20px;
+}
+
+.burger-icon span:nth-child(3) {
+    width: 16px;
+}
+
+#burger-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 5px 0; /* Adjust padding for a more subtle background */
+    border-radius: 5px;
+    background: transparent; /* Remove the background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+#burger-toggle:checked + .burger-icon + .menu {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+    background: #2D2D2D; /* BC for menu items */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Hover background color */
+}
