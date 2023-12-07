@@ -1,10 +1,12 @@
+/* MAP SEITE */
+
 body {
     background-color: #2D2D2D;
     color: rgb(255, 255, 255);
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
-    margin: 0;
-    padding: 0 6vw 0 6vw;
+    margin: 0; /* Resetting default margin */
+    padding: 0 6vw 0 6vw; /* Setting padding for the sides */
 }
 
 h1 {
@@ -25,17 +27,18 @@ h1 {
 /* SPEECH BUBBLE */
 .speech-bubble {
     position: absolute;
-    top: 25px; /* position of the speech bubble */
-    left: -10px; /* Adjust the position of the speech bubble */
-    background-color: #ffffff; /* BC of the speech bubble */
+    top: 25px; 
+    left: -10px; 
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 15px;
     font-size: 16px;
-    font-family: 'Roboto Mono', monospace; /* Apply a fun font for the speech bubble */
+    font-family: 'Roboto Mono', monospace;
     color: black;
-    width: max-content;
+    width: max-content; /* Adjusts width based on content */
 }
 
+/* Triangle before speech bubble */
 .speech-bubble:before {
     content: "";
     position: absolute;
@@ -56,6 +59,7 @@ h1 {
     position: relative;
 }
 
+/* Gradient overlay on the map */
 #map::before {
     content: "";
     position: absolute;
@@ -69,17 +73,17 @@ h1 {
 
 /* MENU*/
 .burger-menu {
-    position: absolute;
+    position: absolute;  /* Burger menu positioning */
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Z-index for stacking order */
 }
 
 .burger-icon {
-    cursor: pointer;
+    cursor: pointer; /* Cursor style for interaction */
     display: block;
     position: relative;
-    user-select: none;
+    user-select: none; /* Prevent text selection */
 }
 
 .burger-icon span {
@@ -100,28 +104,25 @@ h1 {
 }
 
 
-.burger-menu:hover .menu,
-.menu:hover {
-    display: block;
-}
-
 .menu {
-    display: none;
+    display: none; /* Initially hidden */
     position: absolute;
     top: 50px;
     right: 0;
     padding: 5px 0; /* Adjust padding for a more subtle background */
     border-radius: 5px;
     background: transparent; /* Remove the background */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
 }
 
+/* Styles for the list within the menu */
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Styles for individual list items in the menu */
 .menu ul li {
     margin-bottom: 10px;
     background: #2D2D2D; /* BC for menu items */
@@ -129,6 +130,7 @@ h1 {
     transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
+/* Styles for links within menu items */
 .menu ul li a {
     color: white;
     text-decoration: none;
@@ -137,13 +139,6 @@ h1 {
     padding: 10px;
     border-radius: 5px;
 }
-
-.menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-
-/* Icon anpassen unter: https://leafletjs.com/examples/custom-icons/ */
 
 
 footer {
@@ -189,7 +184,7 @@ div a {
 }
 
 
-/* IMPRESSUM */
+/* IMPRESSUM & DATENSCHUTZ */
 
 main {
     max-width: 800px; /* Breite des Inhalts */
@@ -209,6 +204,3 @@ section h2 {
 section p {
     margin-bottom: 15px; /* Abstand unter den Absätzen */
 }
-
-/* DATENSCHUTZ */
-
