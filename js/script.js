@@ -1,3 +1,21 @@
+// Menu
+const menu = document.querySelector('.menu');
+
+// Get the burger icon element
+const burgerIcon = document.querySelector('.burger-icon');
+
+// Add an event listener to the burger icon for click events
+burgerIcon.addEventListener('click', function() {
+    // Toggle the display of the menu
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+});
+
+
+
 // Karte erstellen & Fokussierung auf das Engadin
 var map = L.map('map').setView([46.5, 9.8], 10);
 
@@ -54,18 +72,4 @@ tiktokVideos.forEach(function(video) {
 
 
 
-// Menu
-const menu = document.querySelector('.menu');
 
-// Get the burger icon element
-const burgerIcon = document.querySelector('.burger-icon');
-
-// Add an event listener to the burger icon for click events
-burgerIcon.addEventListener('click', function() {
-    // Toggle the display of the menu
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
-});

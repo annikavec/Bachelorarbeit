@@ -124,10 +124,13 @@ h1 {
 
 /* Styles for individual list items in the menu */
 .menu ul li {
-    margin-bottom: 10px;
     background: #2D2D2D; /* BC for menu items */
     border-radius: 5px; /* Round corners */
     transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.menu ul li:hover{
+   background: #96bd8c;
 }
 
 /* Styles for links within menu items */
