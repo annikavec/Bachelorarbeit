@@ -49,6 +49,12 @@ h1 {
     border-color: #ffffff transparent transparent transparent;
 }
 
+/* Ansicht Mobile */
+@media (max-width: 767px){
+    .speech-bubble{
+        display: none;
+    }
+}
 
 
 /* MAP */
